@@ -1,9 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <!-- Use a data URI for the favicon to make it self-contained and theme-appropriate -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23f7931a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20Z'/%3E%3Cpath d='M7.5 10.25h1.938a2.187 2.187 0 0 1 2.062 2.5c0 .63-.25 1.176-.676 1.563-.44.4-1.01.624-1.636.624H7.5v-4.688Z'/%3E%3Cpath d='M10.5 7.562H7.5v2.688h3a1.563 1.563 0 0 0 1.5-1.437c0-.6-.312-1.063-.844-1.25H10.5Z'/%3E%3Cpath d='M14.562 14.25c.334 0 .65-.062.938-.187v-1.813c-.287.125-.6.188-.937.188a2.125 2.125 0 0 1-1.813-2.125c0-.938.625-1.75 1.813-1.75.338 0 .65.062.938.188V6.75c-.288-.125-.6-.188-.938-.188a3.937 3.937 0 0 0-3.937 3.938c0 2.25 1.688 3.75 3.938 3.75Z'/%3E%3Cpath d='M12.5 12.312V14.5'/%3E%3Cpath d='M12.5 7.5v2.188'/%3E%3C/svg%3E" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>شبیه ساز پیدا کردن کلید خصوصی بیت کوین</title>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -22,10 +22,14 @@
   }
 }
 </script>
+<!-- Add Babel to transpile JSX/TSX in the browser -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 <link rel="stylesheet" href="/index.css">
 </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
-  </body>
+    <!-- Change script type to text/babel and use relative path for GitHub Pages compatibility -->
+    <script type="text/babel" data-type="module" src="./index.tsx"></script>
+  <script type="module" src="/index.tsx"></script>
+</body>
 </html>
